@@ -1,20 +1,19 @@
 import React from 'react';
-import Document, {Head, Main, NextScript} from 'next/document';
-import {extractCritical} from 'emotion-server';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { extractCritical } from 'emotion-server';
 
 export default class MyDocument extends Document {
-    static getInitialProps({renderPage}) {
-        //for emotion-js
+    static getInitialProps({ renderPage }) {
+        // for emotion-js
         const page = renderPage();
         const styles = extractCritical(page.html);
-        return {...pages, ...styles};
+        return { ...page, ...styles };
     }
-
     constructor(props) {
-        //for emotion-js
+        // for emotion-js
         super(props);
-        const {__NEXT_DATA__, ids} = props;
-        if(ids) {
+        const { __NEXT_DATA__, ids } = props;
+        if (ids) {
             __NEXT_DATA__.ids = ids;
         }
     }
