@@ -9,6 +9,7 @@ const footerCls = css `
 `;
 
 const AppFooter = Layout.Footer;
+
 const Footer = ()=>(
     <AppFooter css={footerCls}>
          @2019 || Craft by Digital Artists Inc.

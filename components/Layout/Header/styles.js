@@ -20,6 +20,7 @@ export const headerCls = css`
     img {
       display: inline-block;
       font-size: 20px;
+      max-width: 110px;
       padding: 19px 20px;
       cursor: pointer;
       text-transform: capitalize;

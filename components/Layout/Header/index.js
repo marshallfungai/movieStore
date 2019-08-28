@@ -6,30 +6,29 @@ import LeftMenu from './LeftMenu';
 import RightMenu from './RightMenu';
 
 class Header extends Component {
-    state = {
-        visible: false,
-    };
-
+    
+    state = {visible: false }
+     
     showDrawer = () => {
         this.setState({
             visible: true,
         });
-    };
+    }
 
     onClose = () => {
         this.setState({
             visible: false,
         });
-    };
+    }
 
     render() {
-        const { visible } = this.visible;
+        const  visible = this.visible;
         return (
             <div css= {headerCls}>
                 <nav className="menuBar">
                     <div className="logo">
                         <Link href="/">
-                            <img src="/static/images/logo@1x.png" alt="logo" />
+                            <img src="/static/images/logo@1x.png" alt="Movies logo" />
                         </Link>
                     </div>
                     <div className="menuCon">
@@ -37,7 +36,7 @@ class Header extends Component {
                             <LeftMenu />
                         </div>
                         <div className="rightMenu">
-                            <RightMenu />
+                            <RightMenu  mode="horizontal" />
                         </div>
                         <Button className="barsMenu" onClick={this.showDrawer}>
                             <span className="barsBtn" />
@@ -58,3 +57,5 @@ class Header extends Component {
         );
     }
 }
+
+export default Header;

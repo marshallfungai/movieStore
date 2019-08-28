@@ -2,10 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from 'antd';
 import { css } from '@emotion/core';
-import { Content } from '../components/Layout/Content';
-import { Header } from '../components/Layout/Header';
-import { Container} from '../components/Layout/Container';
-import { Footer } from '../components/Layout/Footer';
+// import {
+//     Content, Footer, Header, Container
+//    } from '../components/Layout';
+import  Content  from '../components/Layout/Content';
+import  Header  from '../components/Layout/Header';
+import Container from '../components/Layout/Container';
+import Footer  from '../components/Layout/Footer';
 
 const mainCls = css`
             max-width: 1000px;
@@ -103,7 +106,7 @@ const bannerConfig = {
                     <div className="overview">{bannerConfig.overview}</div>
                     <div className="overview">{bannerConfig.price}</div>
                     <div className="action">
-                        <Button>Purchase</Button>
+                        <Button type="danger">Purchase</Button>
                         <Button href="https://www.youtube.com/watch?v=5mkm22yO-bs&t=1s">Watch Trailer</Button>
                     </div>
                 </div>
